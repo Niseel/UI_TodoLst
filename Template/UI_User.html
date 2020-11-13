@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TodoList</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../Resource/Lib/Tagify/tagify.css">
+    <link rel="stylesheet" href="../Resource/CSS/mainStyle.css">
+    <link rel="stylesheet" href="../Resource/CSS/UI_User.css">
+</head>
+<body>
+    
+    <div id="wrapper">
+        <!-- sidebar left -->
+        <ul class="navbar-nav sidebar background-sidebar">
+            <a class="sidebar-brand " href="./UI_User.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">User 1</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item ">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-greater-than"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-greater-than"></i>
+                    <span>Tab 2</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider my-0">
+        </ul>
+
+        <!-- Main content and nav-->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <nav class="navbar topbar nav-shadow navbar-expand d-flex flex-row justify-content-between">
+                <!-- <div class="search-box">
+                    <form action="#" method="get" class>
+                        <div class="md-form mt-0">
+                            <input id="userSearch" class="form-control form-search" type="text" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                </div> -->
+                <form action="UI_UserProfile.html" method="get" >
+                    <div class="input-group">
+                        <input id="userSearch" type="text" class="form-control min-w-400 " placeholder="Search your partner" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary" type="button">Search</button>
+                        </div>
+                    </div>
+                </form> 
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="alertBtn">
+                            <i class="fa fa-bell fa-fw"></i>
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <div id="alertShow" class="dropdown-list dropdown-menu dropdown-menu-right shadow animated-scale" aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fa fa-file text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fa fa-times text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    $290.29 has been deposited into your account!
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fa fa-exclamation-triangle text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 2, 2019</div>
+                                    Spending Alert: We've noticed unusually high spending for your account.
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                    </li>
+                    <!-- Mess -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="messBtn">
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <span class="badge badge-danger badge-counter">9+</span>
+                        </a>
+                        <div id="messShow" class="dropdown-list dropdown-menu dropdown-menu-right shadow animated-scale" aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="../Resource/Images/undraw_profile_1.svg" alt="">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.</div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="../Resource/Images/undraw_profile_1.svg" alt="">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold seen">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.</div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="../Resource/Images/undraw_profile_1.svg" alt="">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.</div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="../Resource/Images/undraw_profile_1.svg" alt="">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold seen">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.</div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                    </li>
+                    <div class="topbar-divider"></div>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userBtn">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">User 1</span>
+                            <img class="img-profile rounded-circle" src="../Resource/Images/undraw_profile_1.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated-scale" id="userShow">
+                            <a class="dropdown-item" href="#">
+                                <i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+
+            <!-- Content -->
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="tool-nav">
+                        <div class="tool-item">
+                            <a href="./UI_CreateTask.html">
+                                <i class="fa fa-plus"></i>
+                                <span>Add task</span>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 d-flex">
+                        <div class="card flex-fill none-border font-875r ">
+                            <div class="card-header none-border">
+                                <h5 class="card-title mb-0">To do list</h5>
+                            </div>
+                            <table class="table table-hover none-border">
+                                <thead>
+                                    <tr>
+                                        <th>Task title</th>
+                                        <th>Range</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Status</th>
+                                        <th>Assignment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-toggle="collapse" data-target="#noidungcard2">
+                                        <td>Project Tour List</td>
+                                        <td><span class="badge bg-primary">Public</span></td>
+                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
+                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
+                                        <td><span class="badge bg-success">Done</span></td>
+                                        <td class="d-none d-md-table-cell">Dân tổ</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>Project Apollo</td>
+                                        <td><span class="badge bg-primary">Public</span></td>
+                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
+                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
+                                        <td><span class="badge bg-danger">Cancelled</span></td>
+                                        <td class="d-none d-md-table-cell">Súng máy Bình Chánh</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Project Apollo</td>
+                                        <td><span class="badge bg-dark">Private</span></td>
+                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
+                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
+                                        <td><span class="badge bg-warning">In progress</span></td>
+                                        <td class="d-none d-md-table-cell">Dân chơi hệ tàn hình</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Project Apollo</td>
+                                        <td><span class="badge bg-primary">Public</span></td>
+                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
+                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
+                                        <td><span class="badge bg-secondary">Reminded</span></td>
+                                        <td class="d-none d-md-table-cell">Làm anh là dễ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="card-body collapse line-content"  data-toggle="collapse"  aria-expanded="false" id="noidungcard2">
+                                <h4 class="">Task title</h4>
+                                <h5 class="card-title mb-1 text-muted"><i class="fa fa-sliders"></i> Range: <span class="badge bg-primary">Public</span></h5>
+                                <h5 class="card-title mb-1 text-muted"><i class="fa fa-user"></i> Author: Dân tổ</h5>
+                                <h5 class="card-title mb-1 text-muted"><i class="fa fa-tags"></i> Tag: Súng máy Bình Chánh, Dân chơi hệ tàn hình, Dân tổ</h5>
+                                <h5 class="card-title mb-1 text-muted"><i class="fa fa-check"></i> Status: <span class="badge bg-success">Done</span></h5>
+                                <h5 class="card-title mb-1 text-muted"><i class="fa fa-paperclip"></i> Attached files: <a href="#" class="attached-files">RiverPark.docx</a></h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eligendi, atque ipsam veritatis laudantium eos fuga non dignissimos commodi! Delectus, temporibus quaerat. Labore illum id aliquam et itaque, corporis earum?</p>
+                                <a href="./UI_TaskDetail.html" class="btn btn-outline-primary">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="../Resource/Lib/Tagify/tagify.min.js"></script>
+<script src="../Resource/JS/UI_User.js"></script>
+<script src="../Resource/JS/main.js"></script>
+</body>
+</html>
